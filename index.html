@@ -1,0 +1,31 @@
+<head>
+  <link rel="stylesheet" href="styles/style.css" type="text/css">
+  <link rel="stylesheet" href="styles/page.css" type="text/css">
+</head>
+<body>
+  <script type="text/javascript" src="scripts/hammer.min.js"></script> 
+  <script type="text/javascript" src="scripts/script.js"></script> 
+<span class="bss-slides slideshow" tabindex="1" autofocus="autofocus">
+    <figure>
+        <img src="sample_photos/image1.jpg" width="100%" />
+        <figcaption>Lorem Ipsum</figcaption> 
+    </figure>
+    <!-- more figures here as needed -->
+    <figure>
+        <img src="sample_photos/image3.jpg" width="100%" />
+        <figcaption>Lorem Ipsum 2</figcaption> 
+    </figure>
+    <!-- more figures here as needed -->
+</span>
+<script>
+  var opts = {
+    /*auto : {
+        speed : 100000, 
+        pauseOnHover : true
+    },*/
+    fullScreen : true, 
+    swipe : true
+  };
+  makeBSS('.slideshow', opts);
+</script>
+</body>
