@@ -479,9 +479,7 @@
         if (isFlash(e)) return;
 
         var left  = getOffset($container);
-        if (delta == 0) {
-          alert(delta);
-        }  
+
         // Set classes
         $container.removeClass('grabbed');
         $('html').removeClass('swipeshow-grabbed');
@@ -505,8 +503,20 @@
         if (index < 0) index = 0;
         if (index > c.list.length-1) index = c.list.length-1;
 
-        // Switch to that slide.
-        c.goTo(index);
+        // If the gesture is not swipe right or left then switch to weather screen
+        if (delta == 0) {
+          // If already on weather screen, move back to the first screen. TODO: remeber the last screen and move back there
+          if (index == 3) {
+            c.goTo(1);
+          }
+          else {
+            c.goTo(3);  
+          }          
+        }
+        else {  
+          // Switch to that slide.
+          c.goTo(index);
+        }
 
         // Restart the slideshow if it was already started before.
         if (start.started) c.start();
@@ -852,7 +862,6 @@
 
       var prev = this.current;
       this.current = idx;
-
       this.onactivate.call(this, this.list[idx], idx, this.list[prev], prev);
       this.restart(true);
       return this;
