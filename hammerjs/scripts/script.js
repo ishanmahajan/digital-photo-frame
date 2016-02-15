@@ -5,7 +5,7 @@ var makeBSS = function (el, options) {
             init: function (el, options) {
                 this.counter = 0; // to keep track of current slide
                 this.el = el; // current slideshow container    
-                this.$items = el.querySelectorAll('figure'); // a collection of all of the slides, caching for performance
+                this.$items = el.querySelectorAll('div'); // a collection of all of the slides, caching for performance
                 this.numItems = this.$items.length; // total number of slides
                 options = options || {}; // if options object not passed in, then set to empty object 
                 options.auto = options.auto || false; // if options.auto object not passed in, then set to false

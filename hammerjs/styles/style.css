@@ -5,15 +5,15 @@
 .bss-slides:focus{
  outline: 0;
 }
-.bss-slides figure{
+.bss-slides img{
   position: absolute;
   top: 0;
   width: 100%;
 }
-.bss-slides figure:first-child{
+.bss-slides img:first-child{
   position: relative;
 }
-.bss-slides figure img{
+.bss-slides img{
   opacity: 0;
   /*-webkit-transition: opacity 1.2s;
   transition: opacity 1.2s;
