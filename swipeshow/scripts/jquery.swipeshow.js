@@ -479,7 +479,9 @@
         if (isFlash(e)) return;
 
         var left  = getOffset($container);
-
+        if (delta == 0) {
+          alert(delta);
+        }  
         // Set classes
         $container.removeClass('grabbed');
         $('html').removeClass('swipeshow-grabbed');
