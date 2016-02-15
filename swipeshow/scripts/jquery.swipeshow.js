@@ -507,7 +507,7 @@
         if (Math.abs(delta) < 10) {
           // If already on weather screen, move back to the first screen. TODO: remeber the last screen and move back there
           if (index == 3) {
-            c.goTo(1);
+            c.goTo(0);
           }
           else {
             c.goTo(3);  

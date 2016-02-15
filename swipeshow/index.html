@@ -7,15 +7,18 @@
   <script src='scripts/jquery.swipeshow.js'></script>  
 <div class="my-gallery swipeshow">
   <div class="slides">
-        <img class="slide" src="../sample_photos/image1.jpg" width="100%" />
-        <img class="slide" src="../sample_photos/image3.jpg" width="100%" /> 
-        <img class="slide" src="../sample_photos/image2.jpg" width="100%" />
-        <div class="slide">hello world</div>
+    <img class="slide" src="../sample_photos/image1.jpg" width="100%" />
+    <img class="slide" src="../sample_photos/image3.jpg" width="100%" /> 
+    <img class="slide" src="../sample_photos/image2.jpg" width="100%" />
+    <div class="slide">
+      <span class="weather" style="display: block !important; width: 320px; text-align: center; font-family: sans-serif; font-size: 12px;"><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:10001.5.99999&bannertypeclick=wu_clean2day" title="New York, New York Weather Forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_clean2day_both_cond&airportcode=KNYC&ForcedCity=New York&ForcedState=NY&zip=10001&language=EN" alt="Find more about Weather in New York, NY" width="300" /></a><br><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:10001.5.99999&bannertypeclick=wu_clean2day" title="Get latest Weather Forecast updates" style="font-family: sans-serif; font-size: 12px" target="_blank">Click for weather forecast</a></span>
+      <span class"news"><script src="http://nmp.newsgator.com/NGBuzz/buzz.ashx?buzzId=81503&apiToken=AAA11919E8A84EB8986088D0B39F3E0B&trkP=&trkM=94EB6FAB-58C5-EE96-F3DB-C2444C40C1BA" type="text/javascript"></script></span>
+    </div>
   </div>
 </div>
 <script>
 $(".my-gallery").swipeshow({
-  autostart: false,    /* Set to `false` to keep it steady */
+  autostart: true,    /* Set to `false` to keep it steady */
   interval: 5000,     /* Time between switching slides (ms) */
   initial: 0,         /* First slide's index */
   speed: 700,         /* Animation speed (ms) */
